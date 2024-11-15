@@ -33,6 +33,16 @@
     macros {
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        Symbol_Layer {
+            bindings = <&mo 4>;
+            key-positions = <69 41>;
+            layers = <0>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
