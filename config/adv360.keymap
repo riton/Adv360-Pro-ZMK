@@ -17,6 +17,13 @@
             bindings = <&kp RET>;
         };
 
+        riton_test: riton_test {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(RS(U)) &kp N0 &kp N0 &kp N3 &kp C>;
+            label = "RITON_TEST";
+        };
+
         #endif
 
         hm: homerow_mods {
@@ -102,7 +109,7 @@
 &kp LBRC      &kp LBKT   &kp PIPE    &kp GRAVE     &kp BSLH   &kp CARET  &kp AT                                         &kp GRAVE  &kp LS(QMARK)  &kp COMMA  &kp COMMA  &kp LS(DOT)  &kp LS(FSLH)  &kp COLON
 &kp LS(FSLH)  &kp COLON  &kp EXCL    &kp EXCL      &kp EXCL   &trans     &trans     &trans  &trans      &trans  &trans  &trans     &trans         &trans     &trans     &trans       &trans        &trans
 &trans        &trans     &trans      &trans        &trans     &trans                        &trans      &trans                     &trans         &trans     &trans     &trans       &trans        &trans
-&trans        &trans     &trans      &trans        &trans                &trans     &trans  &trans      &trans  &trans  &trans                    &trans     &trans     &trans       &trans        &trans
+&riton_test   &trans     &trans      &trans        &trans                &trans     &trans  &trans      &trans  &trans  &trans                    &trans     &trans     &trans       &trans        &trans
             >;
         };
     };
